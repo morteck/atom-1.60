@@ -1,0 +1,33 @@
+Atom is only available for 64-bit Linux systems.
+
+Configure your distribution's package manager to install and update Atom by following the Linux installation instructions in the Flight Manual. 
+You will also find instructions on how to install Atom's official Linux packages without using a package repository, though you will not get a
+utomatic updates after installing Atom this way.
+
+Archive extraction: https://github.com/atom/atom/releases/download/v1.60.0/atom-amd64.tar.gz
+
+An archive is available for people who don't want to install atom as root.
+
+This version enables you to install multiple Atom versions in parallel. It has been built on Ubuntu 64-bit, but is also compatible with Arch Linux 
+and it's forked distrobutions (manjaro, endeavourOS, Artix etc..)
+
+Ensure that your OS is up to date with the AUR before installing.
+
+$ sudo pacman -Syu (update pacman database)
+$ yay (update & sync with AUR repositories)
+
+Install dependancies: 
+
+$ yay -S git libasound2 libcurl4 libgbm1 libgcrypt20 libgtk-3-0 libnotify4 libnss3 libglib2.0-bin xdg-utils libx11-xcb1 libxcb-dri3-0 libxss1 
+libxtst6 libxkbfile1 && reboot
+
+You may need to install some dependencies from the AUR as I had some issues locating them in the pacman database. 
+
+1. Download atom-amd64.tar.gz from the https://github.com/atom/atom/releases/tag/v1.60.0.
+2. Run tar xf atom-amd64.tar.gz in the directory where you want to extract the Atom folder.
+3. Launch Atom using the installed atom command from the newly extracted directory.
+
+The Linux version does not currently automatically update so you will need to repeat these steps to upgrade to future releases. 
+You must ensure that you are using release 1.60; ver 1.63 is not compatible with Linux. 
+
+You may be able to run version 1.63 in MS Windows. I'll update this repository once I've tested this.  
